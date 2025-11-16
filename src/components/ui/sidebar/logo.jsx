@@ -4,7 +4,7 @@ import LogoImg from "../../../assets/images/logo.png";
 export const Logo = ({ color }) => {
   return (
     <div className="flex items-center gap-2 cursor-pointer">
-      <NavLink to="/user" className="flex items-center space-x-3">
+      <NavLink to="/" className="flex items-center space-x-3">
         <img
           src={LogoImg}
           alt="JalDhatu Logo"

@@ -113,7 +113,7 @@ export const Footer = () => {
             <h2 className="font-semibold mb-5 text-white">Get in touch</h2>
             <div className="text-sm space-y-2 opacity-90">
               <p>+91-9001900111</p>
-              <p>support@jaldhatu.in</p>
+              <p>support@jalDhatu.in</p>
             </div>
           </div>
         </div>

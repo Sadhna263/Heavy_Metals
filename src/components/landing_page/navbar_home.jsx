@@ -20,7 +20,7 @@ const NavbarHome = () => {
   return (
     <header className="header-container">
       <nav className="header-left">
-        <div className="header-item">Welcome!</div>
+        <div className="font-semibold">Welcome!</div>
       </nav>
 
       <nav className="header-right">
