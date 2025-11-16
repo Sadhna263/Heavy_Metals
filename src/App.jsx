@@ -11,6 +11,7 @@ import { Methodology } from "./components/analysis/methodology";
 import { Suggestion } from "./components/analysis/suggestions";
 import LandingPage from "./pages/landing_page";
 import NotFound from "./pages/not_found";
+import { ProtectedRoute } from "./components/auth/ProtectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/user",
-    element: <Layout />,
+    element: (
+      <ProtectedRoute>
+        <Layout />
+      </ProtectedRoute>
+    ),
     children: [
       { index: true, element: <Dashboard />, handle: { header: "Dashboard" } },
       {

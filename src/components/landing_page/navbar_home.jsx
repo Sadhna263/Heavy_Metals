@@ -1,21 +1,11 @@
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
 import { Button } from "../ui/button";
 import { LanguageDropdown } from "../layout/languageDropdown";
 
 const NavbarHome = () => {
-  const { user, isLoaded } = useUser();
+  const { user } = useUser();
   const { openSignIn } = useClerk();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    // Only run when Clerk user data is loaded
-    if (isLoaded && user) {
-      navigate("/user");
-    }
-  }, [isLoaded, user, navigate]);
 
   return (
     <header className="header-container">
@@ -30,7 +20,7 @@ const NavbarHome = () => {
             <UserButton />
           ) : (
             <Button
-              onClickHandler={() => openSignIn({ redirectUrl: "/user" })}
+              onClick={() => openSignIn({ redirectUrl: "/user" })}
               type="main"
               colorVariant="primary"
             >
