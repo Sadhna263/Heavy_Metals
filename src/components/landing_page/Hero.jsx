@@ -1,11 +1,24 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Hero = () => {
+  const { user, isLoaded } = useUser();
+  const { openSignIn } = useClerk();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Only run when Clerk user data is loaded
+    if (isLoaded && user) {
+      navigate("/user");
+    }
+  }, [isLoaded, user, navigate]);
   return (
     <section
       id="hero"
-      className="relative min-h-[90vh] flex flex-col items-center justify-center text-center text-gray-900 px-6 sm:px-10 overflow-hidden"
+      className="relative min-h-[75vh] flex flex-col items-center justify-center text-center text-gray-900 px-6 sm:px-10 overflow-hidden"
       style={{
         backgroundImage:
           "linear-gradient(to bottom, #0D9486 0%, #2EB87A 50%, #9CD97B 100%)",
@@ -16,7 +29,7 @@ const Hero = () => {
       <main className="relative z-10 max-w-3xl mx-auto flex flex-col items-center justify-center">
 
         {/* TOP BUTTON */}
-        <NavLink to="/user" className="mb-8">
+        <NavLink onClick={() => openSignIn({ redirectUrl: "/user" })} className="mb-8">
           <div className="border border-white text-white text-xs rounded-full px-5 py-2 hover:bg-white/10 transition cursor-pointer">
             Explore Water Quality Insights
           </div>
@@ -39,7 +52,7 @@ const Hero = () => {
         </p>
 
         {/* SECOND BUTTON */}
-        <NavLink to="/user" className="mt-10">
+        <NavLink onClick={() => openSignIn({ redirectUrl: "/user" })} className="mt-10">
           <div className="bg-white text-[#0D9486] px-8 py-3 rounded-full text-sm font-semibold hover:bg-gray-100 transition shadow-md cursor-pointer">
             Explore Tools
           </div>

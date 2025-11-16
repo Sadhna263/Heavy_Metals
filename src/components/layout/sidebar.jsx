@@ -9,9 +9,9 @@ const Sidebar = () => {
     "flex items-center justify-center gap-3 px-4 py-2 rounded transition-colors whitespace-nowrap";
 
   return (
-    <aside className="bg-white shadow-md h-screen w-[220px] flex flex-col justify-between p-4 fixed left-0 top-0">
+    <aside className="bg-white shadow-md h-screen w-[18%] flex flex-col justify-between p-4 fixed left-0 top-0">
       <div>
-        <Logo />
+        <Logo color="#225ca3" />
         <NavBar />
       </div>
       {/* <NavLink to="/logout" className="sidebar-logout">

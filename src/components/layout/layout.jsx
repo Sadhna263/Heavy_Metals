@@ -4,11 +4,14 @@ import { Footer } from "./footer";
 import { Header } from "./header";
 import "./layout.css";
 import { ScrollToTop } from "./scrollToTop";
+import { useClerk } from "@clerk/clerk-react";
 
 const DEFAULT_HEADER = "Dashboard";
 
 export const Layout = () => {
   const matches = useMatches();
+  const { user } = useClerk();
+  const userName = user?.firstName || "User";
 
   const getCurrentHeader = () => {
     const matchWithHeader = matches.find(
@@ -25,9 +28,9 @@ export const Layout = () => {
         <ScrollToTop />
         <main>
           <header>
-            <Header userName="John" children={currentHeader} />
+            <Header userName={userName} children={currentHeader} />
           </header>
-          <Outlet />
+          <Outlet className="w-[72%]" />
         </main>
         <Footer />
       </div>
