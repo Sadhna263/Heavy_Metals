@@ -32,12 +32,12 @@ const NotFound = () => {
           Return Home
         </Link>
 
-        <Link
+        {/* <Link
           to="/contact"
           className="border border-white text-white hover:bg-white/10 px-7 py-2.5 rounded-full font-medium active:scale-95 transition-all"
         >
           Contact Support
-        </Link>
+        </Link> */}
       </div>
     </section>
   );
