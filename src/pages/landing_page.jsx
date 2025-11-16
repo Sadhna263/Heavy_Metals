@@ -26,11 +26,12 @@ const LandingPage = () => {
       {/* Info Section */}
       <section className="flex flex-col items-center justify-center text-center py-16 bg-white">
         <h1 className="text-3xl sm:text-4xl font-semibold text-gray-800">
-          Welcome to the Heavy Metals App
+          Welcome to the Heavy Metals Analysis Platform
         </h1>
         <p className="mt-4 max-w-2xl text-gray-600 text-base sm:text-lg">
-          Your one-stop solution for all heavy metal music needs. Explore,
-          connect, and discover the world of heavy metal like never before.
+          Your all-in-one solution for evaluating, mapping, and reporting heavy metal contamination. Our platform empowers researchers, students, industries, and environmental professionals to analyze data effortlessly using advanced scientific models.
+
+From calculating HMPI values to visualizing contamination on interactive maps, we provide everything you need to assess environmental quality with confidence.
         </p>
       </section>
       <div className='bg="black"'>

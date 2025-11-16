@@ -19,13 +19,13 @@ export const Footer = () => {
             <Logo />  {/* ← Now fully clickable */}
             <NavLink to="/user">
               <h1 className="text-2xl font-semibold hover:underline">
-                Jaldhatu
+                JalDhatu
               </h1>
             </NavLink>
           </div>
 
           <p className="mt-6 text-sm opacity-90 leading-relaxed">
-            Jaldhatu is a scientific platform that analyzes groundwater quality
+            JalDhatu is a scientific platform that analyzes groundwater quality
             by calculating heavy-metal indices, contamination levels, and
             water-risk metrics. Our mission is to make groundwater assessment
             simple, accessible, and accurate.
@@ -123,7 +123,7 @@ export const Footer = () => {
             <h2 className="font-semibold mb-5 text-white">Get in touch</h2>
             <div className="text-sm space-y-2 opacity-90">
               <p>+91-9001900111</p>
-              <p>support@jaldhatu.in</p>
+              <p>support@jalDhatu.in</p>
             </div>
           </div>
 
@@ -137,7 +137,7 @@ export const Footer = () => {
           to="/user"
           className="font-medium text-white hover:underline"
         >
-          Jaldhatu
+          JalDhatu
         </NavLink>{" "}
         . All Rights Reserved.
       </p>
