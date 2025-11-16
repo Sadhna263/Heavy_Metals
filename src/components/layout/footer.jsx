@@ -15,7 +15,7 @@ export const Footer = () => {
       <div className="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-white/20 pb-6">
         {/* Left Section */}
         <div className="md:max-w-96">
-          <Logo color="white" h="10" w="8" />
+          <Logo color="white" />
 
           <p className="mt-6 text-sm opacity-90 leading-relaxed">
             JalDhatu is a scientific platform that analyzes groundwater quality
